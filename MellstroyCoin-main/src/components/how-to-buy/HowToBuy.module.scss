@@ -1,0 +1,54 @@
+@import "styles/index.scss";
+
+.how_to_buy {
+  padding-top: 140px;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    font-size: 40px;
+  }
+}
+
+.menu {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+
+  .option {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .option_header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  hr {
+    height: 1px;
+    background-color: $light;
+    width: 100%;
+  }
+
+  .text {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+@media (max-width: 660px) {
+  .option {
+    padding: 0 20px;
+  }
+}

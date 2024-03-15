@@ -1,0 +1,89 @@
+@import "styles/index.scss";
+
+.home {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  align-items: center;
+  margin: 0 auto;
+
+  p {
+    max-width: 770px;
+    width: 100%;
+    text-align: center;
+    line-height: 140%;
+  }
+}
+
+.logo {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+
+.buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.buy_button {
+  border-radius: 50px;
+  border: 1px solid $accent;
+  font-size: 14px;
+  color: $accent;
+  font-weight: 500;
+  padding: 0 17px;
+  height: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.buy_button:hover {
+  background-color: $accent;
+  color: $light;
+}
+
+.chart {
+  background-color: $accent;
+  border-radius: 50px;
+  width: 150px;
+  height: 40px;
+  color: $light;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.chart:hover {
+  background-color: $button;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+
+  button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $accent;
+    transition: transform 0.2s;
+  }
+
+  button:hover {
+    transform: translateY(-7%);
+  }
+}
+
+@media (max-width: 660px) {
+  .home {
+    width: 90%;
+
+    h1 {
+      font-size: 50px;
+    }
+  }
+}

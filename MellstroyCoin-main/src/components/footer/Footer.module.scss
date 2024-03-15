@@ -1,0 +1,26 @@
+@import "styles/index.scss";
+
+.footer {
+  margin-top: 140px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  border-top: 1px solid rgba($color: $light, $alpha: 0.6);
+}
+
+.content {
+  max-width: 1050px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 660px) {
+
+  .content {
+    width: 90%;
+  }
+
+}

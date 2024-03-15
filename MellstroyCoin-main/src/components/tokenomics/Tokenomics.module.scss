@@ -1,0 +1,90 @@
+@import "styles/index.scss";
+
+.tokenomics {
+  padding-top: 140px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.supply {
+  background-color: $accent;
+  height: 45px;
+  padding: 0 50px;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: 600;
+  color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.supply_text {
+  font-size: 18px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  .cart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 150px;
+
+    h2 {
+      color: $accent;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    gap: 90px;
+
+    .cart {
+      h2 {
+        font-size: 40px;
+        color: $black;
+        text-shadow: 
+        -1px -1px 0 $accent,  
+         1px -1px 0 $accent,
+        -1px  1px 0 $accent,
+         1px  1px 0 $accent;
+      }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .tokenomics {
+    .supply {
+      height: 40px;
+      font-size: 20px;
+    }
+
+    .supply_text {
+      font-size: 16px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+
+    .bottom {
+      .cart {
+        h2 {
+          color: $accent;
+          text-shadow: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+@import "styles/index.scss";
+
+.header {
+  padding: 20px 0;
+  background-color: $black;
+  border-bottom: 1px solid rgba($color: $light, $alpha: 0.5);
+  position: fixed;
+  width: 100%;
+}
+
+.logo {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: 1px solid $accent;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.header_line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  gap: 35px;
+
+  p {
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  p:hover {
+    color: $accent;
+  }
+}
+
+.buy_button {
+  border-radius: 50px;
+  border: 1px solid $accent;
+  font-size: 14px;
+  color: $accent;
+  font-weight: 500;
+  padding: 0 17px;
+  height: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.buy_button:hover {
+  background-color: $accent;
+  color: $light;
+}
+
+.change_lng {
+  margin-left: auto;
+  margin-right: 30px;
+  color: $light;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu_toggle {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin-left: 20px;
+}
+
+.menu_content {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: $black;
+  padding: 10px 40px;
+  border: 1px solid $light;
+}
+
+.bar {
+  width: 100%;
+  height: 2px;
+  background-color: $light; /* Color of the burger icon bars */
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.bar:nth-child(1) {
+  top: 0;
+}
+
+.bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bar:nth-child(3) {
+  bottom: 0;
+}
+
+.menu-open .bar:nth-child(1) {
+  transform: translateY(50%) rotate(45deg);
+}
+
+.menu-open .bar:nth-child(2) {
+  transform: scale(0);
+}
+
+.menu-open .bar:nth-child(3) {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+@media (max-width: 660px) {
+  .logo {
+    display: none;
+  }
+
+  .buy_button {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .menu_toggle {
+    display: inline-block;
+  }
+}
